@@ -13,5 +13,6 @@ echo $loginForm;
 echo $itemsTableHead;
 echo $itemsTableEnd;
 echo $clsDiv;
+echo $clsDiv;
 echo $clsBody;
 echo $clsHtml;
