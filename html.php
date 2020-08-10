@@ -37,41 +37,17 @@ $itemsTableEnd = ' </tbody>
             </table>
         </div>
     </div>';
-$regForm = '<div class="col-3">
-            <form class="px-4 py-3">
-                <div class="form-group">
-                    <label for="exampleDropdownFormEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="exampleDropdownFormPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck">
-                            Remember me
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Sign up</a>
-            <a class="dropdown-item" href="#">Forgot password?</a>
-        </div>';
 $twoColumsTemplate = '<div class="row row-cols-2">';
 
 $loginForm = '<div class="col-3">
-            <form class="px-4 py-3">
+            <form class="px-4 py-3" method="POST" action="regform.php">
                 <div class="form-group">
-                    <label for="exampleDropdownFormEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                    <label for="mail">Email address</label>
+                    <input type="email" name="mail" class="form-control" id="mail" placeholder="email@example.com">
                 </div>
                 <div class="form-group">
-                    <label for="exampleDropdownFormPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" class="form-control" id="pass" placeholder="Password">
                 </div>
                 <div class="form-group">
                     <div class="form-check">

@@ -1,7 +1,12 @@
 <?php
 require_once "html.php";
 require_once "items.php";
-
+?>
+<?php if (isset($_GET['error'])): ?>
+    <div class="alert alert-danger" role="alert">
+        <?= $_GET['error'] ?>
+    </div>
+<?php endif;
 echo $html;
 echo $head;
 echo $clsHead;
