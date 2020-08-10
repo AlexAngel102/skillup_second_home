@@ -11,8 +11,18 @@ echo $clsDiv;
 echo $twoColumsTemplate;
 echo $loginForm;
 echo $itemsTableHead;
+//For more content
+for ($i = 0; $i < 3 ; $i++):
+foreach($items as $key => $item):?>
+<tr>
+    <th><?= $item['item']?></th>
+    <td><?= $item['model']?></td>
+    <td><?= $item['type']?></td>
+    <td><?= $item['price']?></td>
+</tr>
+<?php endforeach;
+endfor;
 echo $itemsTableEnd;
-echo $clsDiv;
-echo $clsDiv;
 echo $clsBody;
 echo $clsHtml;
+?>
