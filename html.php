@@ -57,10 +57,9 @@ $loginForm = '<div class="col-3">
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">Sign UP</button>
             </form>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Sign up</a>
-            <a class="dropdown-item" href="#">Forgot password?</a>
-        </div>';
+            <a class="dropdown-item" href="#">Login in</a>
+           </div>';
 $clsDiv = '</div>';
