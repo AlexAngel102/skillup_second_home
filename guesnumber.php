@@ -1,5 +1,13 @@
 <?php
-$number = $_POST['number'];
+$i = 0;
+$result = 0;
+
+$random = range(1,100);
+function getRandomNumber($arr){
+    $length = count($arr);
+    $i = rand(0, $length-1);
+    return $arr[$i];
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -13,9 +21,21 @@ $number = $_POST['number'];
 
     <title>Guess number</title>
 </head>
-<body>
-<h1>Guess number</h1>
-<>
+<div>
+<div class="container px-2">
+    <h1><p align="center">Guess number</p></h1>
+    <form action="guesnumber.php" method="post">
+    <input type="number" class="form-control" name="number"></input>
+    <button class="btn btn-primary my-3">Guess it</button>
+</form>
+    <p>Tries:
+        <?php while ($_POST['number'] != $result):
+        $result = getRandomNumber($random);
+        $i++;?>
+    <?= $result.', ';?>
+    <?php endwhile?></p>
+    <p>Number of tries: <?=$i?></p>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
