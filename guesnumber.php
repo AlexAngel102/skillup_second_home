@@ -29,11 +29,14 @@ function getRandomNumber($arr){
     <button class="btn btn-primary my-3">Guess it</button>
 </form>
     <p>Tries:
-        <?php while ($_POST['number'] != $result):
+        <?php if ($_POST['number']>0 & $_POST['number']<101):
+        while ($_POST['number'] != $result):
         $result = getRandomNumber($random);
         $i++;?>
     <?= $result.', ';?>
-    <?php endwhile?></p>
+    <?php endwhile;
+        else : die;
+        endif;?></p>
     <p>Number of tries: <?=$i?></p>
 </div>
 
