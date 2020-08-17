@@ -8,6 +8,7 @@ function getRandomNumber($arr){
     $i = rand(0, $length-1);
     return $arr[$i];
 }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,14 +30,15 @@ function getRandomNumber($arr){
     <button class="btn btn-primary my-3">Guess it</button>
 </form>
     <p>Tries:
-        <?php if ($_POST['number']>0 & $_POST['number']<101):
+        <?php if (empty($_POST['number'])):die();
+            endif;
+              if ($_POST['number']<0 & $_POST['number']>101): die();
+            endif;
         while ($_POST['number'] != $result):
         $result = getRandomNumber($random);
         $i++;?>
     <?= $result.', ';?>
-    <?php endwhile;
-        else : die;
-        endif;?></p>
+    <?php endwhile;?></p>
     <p>Number of tries: <?=$i?></p>
 </div>
 
